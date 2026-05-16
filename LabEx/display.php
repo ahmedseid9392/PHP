@@ -12,7 +12,8 @@ include 'db.php';
 <body>
 
 <h2>Users</h2>
-<button><a href="create.php">Add User</a></button>
+    <a href="create.php">Add user</a>
+
 <table border="1" cellpadding="10">
     <thead>
         <tr>
@@ -39,8 +40,10 @@ include 'db.php';
                         <td>{$row['password']}</td>
                         <td>{$row['created_at']}</td>
                         <td>
-                           <a href='edit.php?editid={$row['id']}'>Edit</a>
-                           <a href='delete.php?deleteid={$row['id']}'>Delete</a>
+                           <td>
+   <a href='edit.php?editid={$row['id']}'>Edit</a>
+<a href='delete.php?deleteid={$row['id']}'>Delete</a>
+</td>
                         </td>
                       </tr>";
             }

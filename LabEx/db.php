@@ -10,8 +10,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-echo "<br>";
-
 $sql = "CREATE TABLE IF NOT EXISTS users (
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
@@ -22,9 +20,7 @@ $sql = "CREATE TABLE IF NOT EXISTS users (
 
 $result = $conn->query($sql);
 
-if ($result) {
-    echo " ";
-} else {
+if (!$result) {
     echo "Error creating table: " . $conn->error;
 }
 ?>

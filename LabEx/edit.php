@@ -1,60 +1,59 @@
 <?php
 include 'db.php';
 
-$id=$_GET["editid"];
-$sql= "SELECT * FROM users WHERE id =$id";
-$result= $conn->query($sql);
-$row= $result->fetch_assoc();
-$name=$row["name"];
-$email=$row["email"];
-$password= $row["password"];
+$id = $_GET['editid'];
 
-if(isset($_POST["submit"])){
-    $name=$_POST["name"];
-    $email=$_POST["email"];
-    $password=$_POST["password"];
+$sql = "SELECT * FROM users WHERE id = $id";
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
 
-     if(empty($name) || empty($email) || empty($password)){
-        echo"all field required?";
-    }
-    else{
+$name = $row['name'];
+$email = $row['email'];
+$password = $row['password'];
 
-    $sql ="UPDATE users SET name ='$name' ,email='$email', password ='$password' WHERE id=$id ";
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    $result=$conn->query($sql);
+    $sql = "UPDATE users 
+            SET name='$name', email='$email', password='$password' 
+            WHERE id=$id";
 
-    if($result){
+    $result = $conn->query($sql);
+
+    if ($result) {
         header("Location: display.php");
         exit();
+    } else {
+        echo "Error: " . $conn->error;
     }
-    else{
-        echo "Error: ".$conn->error;
-    }
-    }
-}
-
-if(isset($_POST["cancel"])){
-    header("Location :display.php");
-    exit();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Users</title>
+    <title>Edit User</title>
 </head>
 <body>
-    <h2>Edit User</h2>
-    <form method="post">
-    <label for="">Name:</label>
-    <input type="text" name="name" value="<?php echo $name; ?>" > <br> <br>
-    <label for="">Email:</label>
-    <input type="text" name="email" value="<?php echo $email; ?>" > <br> <br>
-    <label for="">Password:</label>
-    <input type="text" name="password" value="<?php echo $password; ?>" > <br> <br>
-   <button type="submit" name="submit">Update User</button>   <button name="cancel">cancel</button>
-    </form>
+
+<h2>Edit User</h2>
+
+<form method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" value="<?php echo $name; ?>" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" name="email" value="<?php echo $email; ?>" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="text" name="password" value="<?php echo $password; ?>" required><br><br>
+
+    <button type="submit" name="submit">Update User</button>
+</form>
+
 </body>
 </html>
