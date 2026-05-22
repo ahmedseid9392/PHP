@@ -1,0 +1,58 @@
+In PHP, output statements are used to send data (text, numbers, HTML, etc.) to the browser. The following are the most common output statements:  
+PHP echo and print Statements 
+Both echo and print are used to output data to the screen. 
+The differences are: 
+echo has no return value, while print has a return value of 1 so it can be used in expressions. 
+ <?php 
+$result = print "Hello!";   // Prints "Hello!" and sets $result = 1 
+echo "<br>Result: $result"; // Shows: Result: 1 
+?> 
+echo can take multiple parameters, while print can take one argument 
+echo() can take a comma-separated list of string arguments: 
+echo $name, $state, $salary; 
+ print() takes one string argument: 
+print $name;  
+echo is marginally faster than print  
+
+Both echo and print statement can be used with or without parentheses: echo or 
+echo() and print or print(). 
+print_r()  
+It is a built-in PHP function used to print human-readable information about a 
+variable, especially arrays and objects. 
+It shows the structure of the data (keys and values), making it very useful for 
+debugging. 
+Example  
+<?php 
+$arr = ["PHP", "Python", "Java"]; //classic(array() vs modern([])? 
+print_r($arr);//Values and structure, but not data types or lengths. 
+?> 
+Output  
+Array ( [0] => PHP [1] => Python [2] => Java ) 
+
+var_dump() 
+Outputs detailed type and value info (length, data type, value). 
+Example  
+<?php 
+$num = 8; 
+var_dump($num); 
+echo "<br>"; 
+$arr = [1, 2, 3]; 
+var_dump($arr); 
+?> 
+Output  
+int(8) array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }//Data type, value, and for strings, the length
+
+var_export() 
+Outputs or returns a parsable string representation of a variable, This means it shows the 
+variable in valid PHP code format, so the output can even be used in code again. 
+Syntax  
+var_export($variable, $return); 
+ $variable The variable you want to export. 
+ return (optional) If TRUE, var_export() returns the output as a string instead of printing it. Default is 
+FALSE. 
+Example  
+$name = "Eyob"; 
+$age = 12; 
+var_export($name); 
+echo "<br>"; 
+var_export($age);
