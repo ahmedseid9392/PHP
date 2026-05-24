@@ -56,3 +56,36 @@ $age = 12;
 var_export($name); 
 echo "<br>"; 
 var_export($age);
+
+
+
+
+Modes for fopen() 
+• fopen() Mode Name and Description 
+ ‘r’ Open for reading only. Start at beginning of file. 
+‘r+’ Open for reading and writing. Start at beginning of file. 
+‘w’ Open for writing only. Remove all previous content, if file 
+doesn’t exist, create it. 
+W+ Opens the file for reading and writing only. Places the file 
+pointer at the beginning of the file. and remove the 
+previous content. If files does not exist create it.   
+‘a’ Open a file for writing, but start at END of current 
+content. 
+‘a+’ Open for reading and writing, but start at END and create 
+file if necessary. 
+Modes for fopen() 
+• fopen() Mode Name and Description 
+ x Open the file for writing, beginning from the start of the file. If the file 
+already exists, it will not be opened, fopen() will return false, and PHP will 
+generate a warning. 
+x+ Open the file for writing and reading, beginning from the start of the file. If 
+the file already exists, it will not be opened, fopen() will return false, and 
+PHP will generate a warning. 
+b Used in conjunction with one of the other modes. You might want to use this 
+mode if your file system differentiates between binary and text files. 
+Windows systems differentiate; Unix systems do not. The PHP developers 
+recommend you always use this option for maximum portability. It is the 
+default mode. 
+t Used in conjunction with one of the other modes. This mode is an option 
+only in Windows systems. It is not recommended except before you have 
+ported your code to work with the b option.
