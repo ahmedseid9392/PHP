@@ -8,11 +8,11 @@ writeMessage();
 
 //function with parameter
 
-function addFunction($num1, $num2) { 
-$sum = $num1 + $num2; 
-echo "Sum of the two numbers is : $sum"; 
-} 
-addFunction(10,20); 
+// function addFunction($num1, $num2) { 
+// $sum = $num1 + $num2; 
+// echo "Sum of the two numbers is : $sum"; 
+// } 
+// addFunction(10,20); 
 
 //passing argument by refference
 function goodbye( &$greeting ) { 

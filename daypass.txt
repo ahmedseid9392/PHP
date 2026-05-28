@@ -42,20 +42,7 @@ var_dump($arr);
 Output  
 int(8) array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }//Data type, value, and for strings, the length
 
-var_export() 
-Outputs or returns a parsable string representation of a variable, This means it shows the 
-variable in valid PHP code format, so the output can even be used in code again. 
-Syntax  
-var_export($variable, $return); 
- $variable The variable you want to export. 
- return (optional) If TRUE, var_export() returns the output as a string instead of printing it. Default is 
-FALSE. 
-Example  
-$name = "Eyob"; 
-$age = 12; 
-var_export($name); 
-echo "<br>"; 
-var_export($age);
+
 
 
 
