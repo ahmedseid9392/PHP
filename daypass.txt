@@ -14,14 +14,7 @@ echo "<br>Result: $result"; // Shows: Result: 1
 print $name;  
 echo is marginally faster than print  
 
-Both echo and print statement can be used with or without parentheses: echo or 
-echo() and print or print(). 
-print_r()  
-It is a built-in PHP function used to print human-readable information about a 
-variable, especially arrays and objects. 
-It shows the structure of the data (keys and values), making it very useful for 
-debugging. 
-Example  
+
 <?php 
 $arr = ["PHP", "Python", "Java"]; //classic(array() vs modern([])? 
 print_r($arr);//Values and structure, but not data types or lengths. 
