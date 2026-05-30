@@ -7,12 +7,7 @@ The differences are:
 $result = print "Hello!";   // Prints "Hello!" and sets $result = 1 
 echo "<br>Result: $result"; // Shows: Result: 1 
 ?> 
-echo can take multiple parameters, while print can take one argument 
-echo() can take a comma-separated list of string arguments: 
-echo $name, $state, $salary; 
- print() takes one string argument: 
-print $name;  
-echo is marginally faster than print  
+
 
 
 <?php 
