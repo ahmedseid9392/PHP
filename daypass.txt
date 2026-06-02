@@ -66,17 +66,3 @@ only in Windows systems. It is not recommended except before you have
 ported your code to work with the b option.
 
 
-
-PHP Directory Functions  
-• opendir():Returns    a    directory    handle   that   can
-be   
-used   with   readdir(), closedir(). 
-• readdir():Reads  the    next    file    from    a    directo
-ry    handle    opened    with    opendir(). 
-• rmdir():Deletes  a    directory.    It    must    be    emp
-ty    and have    write    permission. 
-• scandir():Returns  an    array    of    files    and    dire
-ctories    from    a    given    path. 
-• unlink() :Deletes  a    file    from    a    directory. 
-• rename (): function is used to rename the name of 
-directories.
