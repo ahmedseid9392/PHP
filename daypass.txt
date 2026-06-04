@@ -1,12 +1,3 @@
-In PHP, output statements are used to send data (text, numbers, HTML, etc.) to the browser. The following are the most common output statements:  
-PHP echo and print Statements 
-Both echo and print are used to output data to the screen. 
-The differences are: 
-echo has no return value, while print has a return value of 1 so it can be used in expressions. 
- <?php 
-$result = print "Hello!";   // Prints "Hello!" and sets $result = 1 
-echo "<br>Result: $result"; // Shows: Result: 1 
-?> 
 
 
 
