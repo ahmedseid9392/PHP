@@ -10,16 +10,7 @@ Array ( [0] => PHP [1] => Python [2] => Java )
 
 var_dump() 
 Outputs detailed type and value info (length, data type, value). 
-Example  
-<?php 
-$num = 8; 
-var_dump($num); 
-echo "<br>"; 
-$arr = [1, 2, 3]; 
-var_dump($arr); 
-?> 
-Output  
-int(8) array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }//Data type, value, and for strings, the length
+
 
 
 
