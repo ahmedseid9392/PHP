@@ -1,14 +1,5 @@
 
 
-
-<?php 
-$arr = ["PHP", "Python", "Java"]; //classic(array() vs modern([])? 
-print_r($arr);//Values and structure, but not data types or lengths. 
-?> 
-Output  
-Array ( [0] => PHP [1] => Python [2] => Java ) 
-
-var_dump() 
 Outputs detailed type and value info (length, data type, value). 
 
 
